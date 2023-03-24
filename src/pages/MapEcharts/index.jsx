@@ -31,6 +31,7 @@ const MapEcharts = () => {
           map: "zibo",
           left: "0%",
           roam: true,
+          zoom: 2,
           boxWidth: 40,
           regionHeight: 5,
           itemStyle: {
@@ -44,7 +45,7 @@ const MapEcharts = () => {
           emphasis: {
             itemStyle: {
               show: true,
-              color: "red",
+              color: "blue",
             },
             label: {
               show: false,

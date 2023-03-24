@@ -15,6 +15,13 @@ export const routes = [
     Component: pages.MapEcharts,
     children: [],
   },
+  {
+    path: "/usememodemo",
+    exact: true,
+    name: "usememo",
+    Component: pages.UseMemoDemo,
+    children: [],
+  },
 
   // {
   //   path: "/user",

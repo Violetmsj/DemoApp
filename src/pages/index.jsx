@@ -1,3 +1,4 @@
 import MapEcharts from "./MapEcharts";
 import Home from "./Home";
-export default { MapEcharts, Home };
+import UseMemoDemo from "./UseMemoDemo";
+export default { MapEcharts, Home, UseMemoDemo };
