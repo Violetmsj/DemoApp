@@ -29,4 +29,11 @@ export const routes = [
     Component: pages.DatePickerDemo,
     children: [],
   },
+  {
+    path: "/SocketDemo",
+    exact: true,
+    name: "SocketDemo",
+    Component: pages.SocketDemo,
+    children: [],
+  },
 ];
