@@ -36,4 +36,11 @@ export const routes = [
     Component: pages.SocketDemo,
     children: [],
   },
+  {
+    path: "/FileDemo",
+    exact: true,
+    name: "FileDemo",
+    Component: pages.FileDemo,
+    children: [],
+  },
 ];
