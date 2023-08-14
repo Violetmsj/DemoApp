@@ -6,6 +6,7 @@ import SocketDemo from "./SocketDemo";
 import FileDemo from "./FileDemo";
 import ErrorDemo from "./ErrorDemo";
 import SelectDemo from "./SelectDemo";
+import ScrollBoxDemo from "./ScrollBoxDemo";
 export default {
   MapEcharts,
   Home,
@@ -15,4 +16,5 @@ export default {
   FileDemo,
   ErrorDemo,
   SelectDemo,
+  ScrollBoxDemo,
 };

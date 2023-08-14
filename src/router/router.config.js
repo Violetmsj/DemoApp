@@ -57,4 +57,11 @@ export const routes = [
     Component: pages.SelectDemo,
     children: [],
   },
+  {
+    path: "/ScrollBoxDemo",
+    exact: true,
+    name: "ScrollBoxDemo",
+    Component: pages.ScrollBoxDemo,
+    children: [],
+  },
 ];
