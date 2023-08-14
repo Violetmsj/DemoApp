@@ -7,6 +7,7 @@ import FileDemo from "./FileDemo";
 import ErrorDemo from "./ErrorDemo";
 import SelectDemo from "./SelectDemo";
 import ScrollBoxDemo from "./ScrollBoxDemo";
+import BIN2DEC from "./BIN2DEC";
 export default {
   MapEcharts,
   Home,
@@ -17,4 +18,5 @@ export default {
   ErrorDemo,
   SelectDemo,
   ScrollBoxDemo,
+  BIN2DEC,
 };

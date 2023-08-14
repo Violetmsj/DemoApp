@@ -64,4 +64,11 @@ export const routes = [
     Component: pages.ScrollBoxDemo,
     children: [],
   },
+  {
+    path: "/BIN2DEC",
+    exact: true,
+    name: "BIN2DEC",
+    Component: pages.BIN2DEC,
+    children: [],
+  },
 ];
