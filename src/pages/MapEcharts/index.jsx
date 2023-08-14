@@ -7,10 +7,12 @@ const MapEcharts = () => {
   var scatterData = [
     {
       name: "Test1",
-      value: [118.007413, 36.815387, 10],
+      value: [118.007413, 36.815387, 1],
     },
   ];
+  const [render, setRender] = useState(true);
   useEffect(() => {
+    console.log(render);
     //有的话就获取已有echarts实例的DOM节点。
     let myecharts = echarts.getInstanceByDom(document.getElementById("main"));
     if (myecharts == null) {
@@ -19,14 +21,20 @@ const MapEcharts = () => {
       echarts.registerMap("zibo", zibo); //第一个参数是你定义的字符串，下面map要用到，第二个就是你刚刚引入的china.json
     }
 
-    var option;
-    myecharts.setOption(
-      (option = {
-        // geo: {
-        //   map: "zibo",
-        //   show: true,
-        // },
-        geo3D: {
+    var option = {
+      // geo: {
+      //   map: "zibo",
+      //   show: true,
+      // },
+      tooltip: {
+        trigger: "item",
+        show: true,
+        formatter: () => {
+          return "8889";
+        },
+      },
+      geo3D: [
+        {
           show: true,
           map: "zibo",
           left: "0%",
@@ -54,64 +62,74 @@ const MapEcharts = () => {
           },
           regions: [],
         },
-        series: [
-          {
-            type: "scatter3D",
-            coordinateSystem: "geo3D",
-            data: scatterData,
-            symbol: "diamond",
-            symbolSize: 50,
-            tooltip: {
-              show: true,
-              enterable: true, // 鼠标可移入tooltip中
-              padding: 0,
-              extraCssText: "width: 280px;height: 171px;border: none;",
-              textStyle: {
-                color: "black",
-              },
-              formatter: "222",
-              // formatter: function (params) {
-              //   return `<button>85</button>`;
-              // },
+      ],
+      series: [
+        {
+          type: "scatter3D",
+          coordinateSystem: "geo3D",
+          data: scatterData,
+          symbol: "diamond",
+          symbolSize: 50,
+          // tooltip: {
+          //   show: true,
+          //   enterable: true, // 鼠标可移入tooltip中
+          //   padding: 0,
+          //   extraCssText: "width: 280px;height: 171px;border: none;",
+          //   textStyle: {
+          //     color: "black",
+          //   },
+          //   formatter: "222",
+          //   // formatter: function (params) {
+          //   //   return `<button>85</button>`;
+          //   // },
+          // },
+          itemStyle: {
+            color: "yellow",
+          },
+          label: {
+            show: true,
+            position: "right",
+            distance: -35,
+            formatter(params) {
+              return "888";
             },
-            itemStyle: {
-              color: "yellow",
-            },
-            label: {
-              show: true,
-              position: "right",
-              distance: -35,
-              formatter(params) {
-                return "888";
-              },
 
-              textStyle: {
-                color: "black",
-                padding: [15, 20],
-              },
-            },
-            emphasis: {
-              label: {
-                show: true,
-                textStyle: {},
-              },
+            textStyle: {
+              color: "black",
+              padding: [15, 20],
             },
           },
-        ],
-      })
-    );
-  }, []);
+          emphasis: {
+            label: {
+              show: true,
+              textStyle: {},
+            },
+          },
+        },
+      ],
+    };
+    myecharts.setOption(option);
+  }, [render]);
 
   return (
-    <div
-      id="main"
-      style={{
-        width: "500px",
-        height: "700px",
-        margin: "0 auto",
-        background: "pink",
-      }}
-    ></div>
+    <>
+      <div
+        id="main"
+        style={{
+          width: "500px",
+          height: "700px",
+          margin: "0 auto",
+          background: "pink",
+        }}
+      ></div>
+      <button
+        onClick={() => {
+          setRender(!render);
+        }}
+      >
+        rerender
+      </button>
+    </>
   );
 };
 export default MapEcharts;

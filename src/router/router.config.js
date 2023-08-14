@@ -43,4 +43,18 @@ export const routes = [
     Component: pages.FileDemo,
     children: [],
   },
+  {
+    path: "/ErrorDemo",
+    exact: true,
+    name: "ErrorDemo",
+    Component: pages.ErrorDemo,
+    children: [],
+  },
+  {
+    path: "/SelectDemo",
+    exact: true,
+    name: "SelectDemo",
+    Component: pages.SelectDemo,
+    children: [],
+  },
 ];

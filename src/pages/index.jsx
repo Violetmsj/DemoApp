@@ -4,6 +4,8 @@ import UseMemoDemo from "./UseMemoDemo";
 import DatePickerDemo from "./DatePickerDemo";
 import SocketDemo from "./SocketDemo";
 import FileDemo from "./FileDemo";
+import ErrorDemo from "./ErrorDemo";
+import SelectDemo from "./SelectDemo";
 export default {
   MapEcharts,
   Home,
@@ -11,4 +13,6 @@ export default {
   DatePickerDemo,
   SocketDemo,
   FileDemo,
+  ErrorDemo,
+  SelectDemo,
 };

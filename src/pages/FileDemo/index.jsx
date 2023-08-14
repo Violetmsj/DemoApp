@@ -10,6 +10,7 @@ const props = {
     authorization: "authorization-text",
   },
   onChange(info) {
+    console.log("info", info);
     if (info.file.status !== "uploading") {
       console.log(info.file, info.fileList);
     }
