@@ -14,12 +14,12 @@ function BIN2DEC() {
     return;
   };
   const handletransform = () => {
-    if (binValue.length > 8) {
-      message.warning("长度不能大于8");
-      return;
-    } else {
-      setDecValue(parseInt(binValue, 2));
-    }
+    // if (binValue.length > 8) {
+    //   message.warning("长度不能大于8");
+    //   return;
+    // } else {
+    setDecValue(parseInt(binValue, 2));
+    // }
   };
   return (
     <>
